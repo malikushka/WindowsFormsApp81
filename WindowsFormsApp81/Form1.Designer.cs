@@ -40,11 +40,11 @@
             this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.данныеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.анализToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сортировкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.анализToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сортировкаToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.label4 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -155,6 +155,12 @@
             this.данныеToolStripMenuItem.Size = new System.Drawing.Size(78, 24);
             this.данныеToolStripMenuItem.Text = "Данные";
             // 
+            // сортировкаToolStripMenuItem
+            // 
+            this.сортировкаToolStripMenuItem.Name = "сортировкаToolStripMenuItem";
+            this.сортировкаToolStripMenuItem.Size = new System.Drawing.Size(175, 26);
+            this.сортировкаToolStripMenuItem.Text = "Сортировка";
+            // 
             // анализToolStripMenuItem
             // 
             this.анализToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -163,16 +169,10 @@
             this.анализToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
             this.анализToolStripMenuItem.Text = "Анализ";
             // 
-            // сортировкаToolStripMenuItem
-            // 
-            this.сортировкаToolStripMenuItem.Name = "сортировкаToolStripMenuItem";
-            this.сортировкаToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.сортировкаToolStripMenuItem.Text = "Сортировка";
-            // 
             // сортировкаToolStripMenuItem1
             // 
             this.сортировкаToolStripMenuItem1.Name = "сортировкаToolStripMenuItem1";
-            this.сортировкаToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.сортировкаToolStripMenuItem1.Size = new System.Drawing.Size(175, 26);
             this.сортировкаToolStripMenuItem1.Text = "Сортировка";
             // 
             // label4
@@ -184,20 +184,21 @@
             this.label4.TabIndex = 14;
             this.label4.Text = "Количесво сравнений";
             // 
-            // richTextBox1
+            // listBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(283, 12);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(395, 264);
-            this.richTextBox1.TabIndex = 15;
-            this.richTextBox1.Text = "";
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 16;
+            this.listBox1.Location = new System.Drawing.Point(276, 31);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(502, 324);
+            this.listBox1.TabIndex = 15;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox3);
@@ -237,7 +238,7 @@
         private System.Windows.Forms.ToolStripMenuItem анализToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem сортировкаToolStripMenuItem1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        public System.Windows.Forms.ListBox listBox1;
     }
 }
 
