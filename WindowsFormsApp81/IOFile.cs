@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp81
 {
-    public interface IStrategy
+    internal class IOFile
     {
-        int[] Algorithm(int[] mas, bool flag = true);
     }
 }
