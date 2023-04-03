@@ -25,17 +25,17 @@ namespace WindowsFormsApp81
                         this.iterationCount++;
                         IOFile.content += this.iterationCount.ToString() + " итерация: " + '\n';
                         IOFile.InputInfoAboutComparison(mas[i], mas[j]);
-                        Analysis.Comparison++;
+                        Form3.Comparison++;
                         if (mas[i] > mas[j])
                         {
                             IOFile.InputInfoAboutTransposition(mas[i], mas[j]);
                             temp = mas[i];
                             mas[i] = mas[j];
                             mas[j] = temp;
-                            Analysis.NumberOfPermutations++;
+                            Form3.NumberOfPermutations++;
 
                             IOFile.FillContent();
-                            form1.AddItemsListBox(mas[i], mas[j]);
+                            form1.listBox1(mas[i], mas[j]);
                         }
                     }
                 }
@@ -46,9 +46,9 @@ namespace WindowsFormsApp81
                     resultTime.Minutes,
                     resultTime.Seconds,
                     resultTime.Milliseconds);
-                form1.label4.Text = Convert.ToString(Analysis.Comparison);
-                form1.label5.Text = Convert.ToString(Analysis.NumberOfPermutations);
-                form1.label6.Text = elapsedTime;
+                form1.label5.Text = Convert.ToString(Form3.Comparison);
+                form1.label6.Text = Convert.ToString(Form3.NumberOfPermutations);
+                form1.label7.Text = elapsedTime;
 
                 return mas;
             }
@@ -61,13 +61,13 @@ namespace WindowsFormsApp81
                 {
                     for (int j = i + 1; j < mas.Length; j++)
                     {
-                        Analysis.Comparison++;
+                        Form3.Comparison++;
                         if (mas[i] > mas[j])
                         {
                             temp = mas[i];
                             mas[i] = mas[j];
                             mas[j] = temp;
-                            Analysis.NumberOfPermutations++;
+                            Form3.NumberOfPermutations++;
                         }
                     }
                 }
@@ -78,8 +78,8 @@ namespace WindowsFormsApp81
                     resultTime.Minutes,
                     resultTime.Seconds,
                     resultTime.Milliseconds);
-                Analysis.timeSort = resultTime.Seconds * 1000 + resultTime.Milliseconds;
-                Analysis.elapsedTime = elapsedTime;
+                Form3.timeSort = resultTime.Seconds * 1000 + resultTime.Milliseconds;
+                Form3.elapsedTime = elapsedTime;
                 return mas;
             }
         }

@@ -35,7 +35,7 @@ namespace WindowsFormsApp81
                 {
                     this.context = new Context(new BubbleSort());
                     context.ExecuteAlgorithm();
-                    this.listBox1();
+                    this.ListBox();
                     IOFile.SaveData();
                     button1.Enabled = false;
                 }
@@ -43,7 +43,7 @@ namespace WindowsFormsApp81
                 {
                     this.context = new Context(new Methods());
                     context.ExecuteAlgorithm();
-                    this.listBox1();
+                    this.ListBox();
                     IOFile.SaveData();
                     button1.Enabled = false;
                 }
@@ -84,12 +84,12 @@ namespace WindowsFormsApp81
             this.count = 0;
         }
 
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        public void ListBox(int first = -1, int second = -1)
         {
             listBox1.Items.Add("");
             foreach (var item in Context.array)
             {
-                if (item == f || item == s)
+                if (item == first || item == second)
                 {
                     listBox1.Items[count] += '[' + Convert.ToString(item) + ']' + " ";
                 }
@@ -99,7 +99,11 @@ namespace WindowsFormsApp81
                 }
             }
             count++;
+        }
 
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
         }
 
         private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

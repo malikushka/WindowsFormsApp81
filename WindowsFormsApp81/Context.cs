@@ -10,12 +10,20 @@ namespace WindowsFormsApp81
    {
         public IStrategy ContextStrategy;
         public static int[] array;
+        private Methods methods;
+
         public Context(IStrategy Strategy)
         {
            this.ContextStrategy = Strategy;
         }
         public Context() { }
-          public void ExecuteAlgorithm(bool flag = true)
+
+        public Context(Methods methods)
+        {
+            this.methods = methods;
+        }
+
+        public void ExecuteAlgorithm(bool flag = true)
           {
                 ContextStrategy.Algorithm(array, flag);
           }
